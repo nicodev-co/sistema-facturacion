@@ -27,7 +27,7 @@
 3. **Instalar dependencias de Node.js**:
 
     ```bash
-    npm install
+    npm install && npm run build
     ```
 
 4. **Copiar el archivo de entorno**:
