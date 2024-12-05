@@ -1,0 +1,81 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.container {
+    margin-top: 20px;
+    flex: 1;
+}
+.nav-link {
+    font-size: 1.1rem;
+}
+.nav-link.active {
+    font-weight: bold;
+    color: #0d6efd !important;
+}
+.nav-link:hover {
+    color: #0a58ca !important;
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .container, .container * {
+        visibility: visible;
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        zoom: 100%;
+    }
+    .no-print {
+        display: none;
+    }
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+    .card-header {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+    }
+    .table tbody + tbody {
+        border-top: 2px solid #dee2e6;
+    }
+}
